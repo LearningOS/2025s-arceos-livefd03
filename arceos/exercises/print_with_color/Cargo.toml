@@ -3,5 +3,8 @@ name = "print_with_colord"
 version = "0.1.0"
 edition = "2021"
 
+[features]
+default = ["axstd"]
+
 [dependencies]
 axstd = { workspace = true, optional = true }

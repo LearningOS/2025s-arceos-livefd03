@@ -77,8 +77,12 @@ pub mod fs;
 pub mod net;
 
 
+#[cfg(feature = "alloc")]
 mod hashmap;
+#[cfg(feature = "alloc")]
 pub mod collections{
+    extern crate alloc;
+
     pub use crate::hashmap::HashMap;
     pub use alloc::collections::*;
 }
